@@ -16,29 +16,33 @@ const int motorPin2 = 15;
 int motorSpeed = 250; // Adjust motor speed (0-255)
 Servo myservo;
 
-// Wifi Credentials
-char ssid[] = "motorola edge 20 fusion";   
-char pass[] = "vamsivamsi";   
+// Enter your Wifi Credentials
+// replace x with your details
+char ssid[] = "xxxxxxxxxxxxx";   
+char pass[] = "xxxxxxxxx";   
 int keyIndex = 0;            
 WiFiClient  client;
 
-// Thingspeak Channels Credentials
+// Enter Thingspeak Channels Credentials
+// Create separate channels for each. The gas sensor and temp&humidity sensor can have same channel.
+// Note: " The Thingspeak platform accepts data every 15 seconds, which means there should be a minimum delay of 15 seconds between uploads. 
+//         This is not much important for sensor values, but when testing, make sure the orders you upload meet the requirements."
 
 // Order channel
-unsigned long channelid = 2588976;
-const char* readapikey = "IGOM0DEHIZ32FCGR" ;
-const char* myWriteAPIKey = "0CIJ3OZKXMW2R7KG";
-unsigned int fieldnumber = 1;
+unsigned long channelid = xxxxxxxxx;
+const char* readapikey = "xxxxxxxxx" ;
+const char* myWriteAPIKey = "xxxxxxxxxxx";
+unsigned int fieldnumber = x;
 
 // Gas Sensor channel details
-unsigned long gaschannelid = 2552926;
-const char* g_readapikey = "60L0Q03274DL72DD";
-const char* g_writeapikey = "9OYXGBLB2LH1364I";
+unsigned long gaschannelid = xxxxxxx;
+const char* g_readapikey = "xxxxxxxxxxx";
+const char* g_writeapikey = "xxxxxxxxxxxxx";
 
 // T&H Channel Details
-unsigned long tandhchannelid = 2538812;
-const char* tandh_readapikey = "HP66GG7YLH8HC53U";
-const char* tandh_writeapikey = "V1S1TBLQBK7RSOCW";
+unsigned long tandhchannelid = xxxxxxxxxxx;
+const char* tandh_readapikey = "xxxxxxxxxxxxxxxx";
+const char* tandh_writeapikey = "xxxxxxxxxxxxxx";
 
 void setup() {
   
